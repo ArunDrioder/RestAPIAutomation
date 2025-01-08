@@ -1,6 +1,7 @@
 package Basics;
 
 import Files.Payload;
+import Files.Reusables;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -48,7 +49,7 @@ public class AddPlaceApi {
                 .when().get("maps/api/place/get/json")
                 .then().assertThat().statusCode(200).extract().response().asString();
 
-        JsonPath jsonJsPath = new JsonPath(getPlaceResponseString);
+       JsonPath jsonJsPath =  Reusables.rawToJson(getPlaceResponseString);
         String actualAddress = jsonJsPath.getString("address");
         System.out.println(actualAddress);
         Assert.assertEquals(actualAddress,newAddress);
