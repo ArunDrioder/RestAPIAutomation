@@ -67,4 +67,31 @@ public class Payload
 
         return addBookPayLoad;
     }
+
+    public static String deleteBook(String bookID)
+    {
+        String deletedBook = "{\n" +
+                "    \"ID\": \""+bookID+"\"\n" +
+                "}";
+
+        return deletedBook;
+    }
+
+    public static String addBug()
+    {
+        String addBug = "{\n" +
+                "    \"fields\": {\n" +
+                "        \"project\": {\n" +
+                "            \"key\": \"SCRUM\"\n" +
+                "        },\n" +
+                "        \"summary\": \"Image is not loaded - Issue\",\n" +
+                "        \"description\": \"After attaching the image in the placeholderr, it's not loaded when we refresh the page\",\n" +
+                "        \"issuetype\": {\n" +
+                "            \"name\": \"Bug\"\n" +
+                "        }\n" +
+                "    }\n" +
+                "}";
+
+        return addBug;
+    }
 }
