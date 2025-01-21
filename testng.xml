@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <groups>
+        <run>
+            <include name="loginGroup"/>
+            <include name="productGroup"/>
+        </run>
+    </groups>
+    <test verbose="2" preserve-order="true" name="C:/Users/arunp/IdeaProjects/RestAPIAutomation">
+        <classes>
+
+<!--            <class name="Basics.AddPlaceApi">-->
+<!--                <methods>-->
+<!--                    <include name="addPlaceTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="Basics.ComplexJsonParse">-->
+<!--                <methods>-->
+<!--                    <include name="printValues"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="Basics.DynamicJson">-->
+<!--                <methods>-->
+<!--                    <include name="addBook"/>-->
+<!--                    <include name="deleteBook"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="Basics.Serialization">-->
+<!--                <methods>-->
+<!--                    <include name="deserializationTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="Basics.SpecBuildersTest">-->
+<!--                <methods>-->
+<!--                    <include name="specBuilderTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="Basics.SumValidation">-->
+<!--                <methods>-->
+<!--                    <include name="sumOfAllCoursePrice"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+
+
+
+            <class name="EcomAPis.LoginApi">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+
+            <class name="EcomAPis.AddProductApi">
+                <methods>
+                    <include name="addProduct"/>
+                </methods>
+            </class>
+
+            <class name="EcomAPis.CreateOrderApi">
+                <methods>
+                    <include name="createNewOrder"/>
+                </methods>
+            </class>
+
+
+
+
+
+
+<!--            <class name="JiraAPIs.AddBug">-->
+<!--                <methods>-->
+<!--                    <include name="addBug"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="OAuthAPis.OAuthTest">-->
+<!--                <methods>-->
+<!--                    <include name="authorizationServerTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+</suite>

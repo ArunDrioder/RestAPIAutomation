@@ -4,6 +4,7 @@ public class AuthManager
 {
     private static String authToken;
     private static String authUserId;
+    private static String productId;
 
 
 
@@ -26,5 +27,14 @@ public class AuthManager
 
     public static String getAuthToken() {
         return authToken;
+    }
+
+
+    public static String getProductId() {
+        return productId;
+    }
+
+    public static void setProductId(String productId) {
+        AuthManager.productId = productId;
     }
 }

@@ -11,8 +11,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class LoginApi {
-    @Test
-
+    @Test(groups = {"loginGroup"})
     public void login() {
         RequestSpecification requestSpecification = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
                 .setContentType(ContentType.JSON).build();
@@ -21,7 +20,7 @@ public class LoginApi {
         login.setUserEmail("restapiautomationn@gmail.com");
         login.setUserPassword("Arun@!234");
 
-        RequestSpecification reqSpc = given().spec(requestSpecification).body(login);
+        RequestSpecification reqSpc = given().relaxedHTTPSValidation().spec(requestSpecification).body(login);
         LoginResponsePayload loginResponsePayload = reqSpc.post("api/ecom/auth/login").then().extract().response().as(LoginResponsePayload.class);
         String loginToken = loginResponsePayload.getToken();
         String loginUserId = loginResponsePayload.getUserId();
